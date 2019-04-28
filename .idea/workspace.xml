@@ -138,7 +138,7 @@
       <workItem from="1555340094341" duration="181000" />
       <workItem from="1556111383550" duration="885000" />
       <workItem from="1556288688361" duration="3548000" />
-      <workItem from="1556310390574" duration="1278000" />
+      <workItem from="1556310390574" duration="1366000" />
     </task>
     <task id="LOCAL-00001" summary="Cleaned up home page">
       <created>1555340243574</created>
@@ -151,11 +151,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10598000" />
+    <option name="totallyTimeSpent" value="10686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="31" width="2560" height="1409" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14336775" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

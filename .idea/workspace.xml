@@ -4,7 +4,6 @@
     <list default="true" id="811a6d21-0703-43ad-b801-2a5c033d4af7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/Resume.pdf" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,6 +90,7 @@
       <workItem from="1560342374897" duration="976000" />
       <workItem from="1570057204726" duration="31000" />
       <workItem from="1570057304624" duration="534000" />
+      <workItem from="1571147556565" duration="406000" />
     </task>
     <task id="LOCAL-00001" summary="Cleaned up home page">
       <created>1555340243574</created>
@@ -110,7 +110,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="811a6d21-0703-43ad-b801-2a5c033d4af7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Publications.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +38,11 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -56,18 +61,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pages" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -91,6 +84,8 @@
       <workItem from="1570057204726" duration="31000" />
       <workItem from="1570057304624" duration="534000" />
       <workItem from="1571147556565" duration="443000" />
+      <workItem from="1583185410547" duration="11000" />
+      <workItem from="1583185441544" duration="1418000" />
     </task>
     <task id="LOCAL-00001" summary="Cleaned up home page">
       <created>1555340243574</created>
@@ -121,5 +116,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Cleaned up home page" />
     <option name="LAST_COMMIT_MESSAGE" value="Cleaned up home page" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="517" y="333" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583185417283">
+      <screen x="0" y="32" width="1920" height="1168" />
+    </state>
+    <state x="517" y="333" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1080/0.32.1920.1168@0.32.1920.1168" timestamp="1583185417283" />
   </component>
 </project>

@@ -99,16 +99,17 @@
                 </div>
                 <div id="collapsetraining" class="collapse" aria-labelledby="training" data-parent="#accordion">
                   <div class="card-body">
-                    <p>Since February 2020, the GSC had chosen one graduate student a month. </p>
-                    <p> We highlight their work in approximately 300 words and one image on our social media (<a href="https://www.facebook.com/cascagsc">Facebook</a>,
-                      <a href="https://www.instagram.com/casca_gsc/">Instagram</a>, <a href="https://twitter.com/casca_gsc">Twitter</a>: handle <i>casca_gsc</i>).</p>
-                    Additionally, we post their profile on our website dedicated to their achievements: <a href="https://casca.ca/?page_id=14513">Graduate Student Highlights.</a></p>
-                    <h3>Jessica Campbell; September 2020 </h3>
-                    <p>
-                      Jessica’s research focuses on the multiphase nature of our Galaxy’s magnetic field and how it connects between different phases of the interstellar medium (ISM).
-                      Whether it is the turbulent warm ionized medium (WIM) that fills much of the Galaxy or the cold neutral medium (CNM) often found in sheets and filaments,
-                      this complex ISM is permeated with high energy cosmic rays and magnetic fields.
+                    <p>A crucial step in developing a machine learning algorithm is constructing the appropriate training set. In order to do so, we create synthetic SITELLE spectrum
+                    which represent SN1 (365-385), SN2 (480-520 nm), and SN3 (651-685 nm) emission from galaxies. We obtain line amplitudes from the 3 Million Mexican Model database simulations for HII regions (BOND simulation),
+                      planetary nebulae, and supernova remnants. We allow velocities to vary between -200 and 200 km/s and broadening to vary between 10 and 50 km/s. The emission lines are modeled as the SITELLE ILS, a sinc function, convolved with a
+                      Gaussian.
                     </p>
+                    <figure>
+                      <img class="w-100" src="images/example_spectrum.png" />
+                      <figcaption>Fig. 2 - A typical synthetic spectrum of an HII region in SN3.</a>.
+                      </figcaption>
+                    </figure>
+
 
                   </div>
                 </div>
@@ -125,21 +126,17 @@
                 </div>
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                   <div class="card-body">
-                    <p>Since February 2020, the GSC had chosen one graduate student a month. </p>
-                      <p> We highlight their work in approximately 300 words and one image on our social media (<a href="https://www.facebook.com/cascagsc">Facebook</a>,
-                        <a href="https://www.instagram.com/casca_gsc/">Instagram</a>, <a href="https://twitter.com/casca_gsc">Twitter</a>: handle <i>casca_gsc</i>).</p>
-                      Additionally, we post their profile on our website dedicated to their achievements: <a href="https://casca.ca/?page_id=14513">Graduate Student Highlights.</a></p>
-                        <h3>Jessica Campbell; September 2020 </h3>
+                    <figure>
+                      <img class="w-100" src="images/cnn.jpg" />
+                      <figcaption>Fig. 3 -  Schematic Diagram of the Convolutional Neural Network employed in this work</figcaption>
+                    </figure>
                         <p>
-                          Jessica’s research focuses on the multiphase nature of our Galaxy’s magnetic field and how it connects between different phases of the interstellar medium (ISM).
-                          Whether it is the turbulent warm ionized medium (WIM) that fills much of the Galaxy or the cold neutral medium (CNM) often found in sheets and filaments,
-                          this complex ISM is permeated with high energy cosmic rays and magnetic fields.
+                          The <a href="https://arxiv.org/abs/2008.08093">first paper</a> explores the use of a convolutional neural network to extract the flux and velocity of underlying components.
+                          We report a standard deviation of ∼5 km/s for the velocity parameter and a standard deviation of approximately 5.5 km/s for the broadening parameter.
                         </p>
                     <figure>
-                      <img class="w-100" src="images/Jessica1-GH-768x733.png" />
-                      <figcaption>Fig. 1 - <a target="_blank" href="https://casca.ca/?page_id=14667">September 2020 Gradaute Highlightee Jessica Campbell's work on galactic magnetic fields</a>
-                      This figure shows a region that she calls S1-C where the local magnetic field appears to be coupled between the diffuse WIM and clumpy CNM, soon to appear in ApJ. The red image shows the spatial gradient of the synchrotron polarization vector, also called the polarization gradient,
-                      which identifies abrupt changes in the thermal electron density and/or line-of-sight magnetic field strength within the WIM. </figcaption>
+                      <img class="w-100" src="images/Velocity_dist_30k_resvar.png" />
+                      <figcaption>Fig. 4 -  Density plot of the velocity residuals in km s−1along with the standard deviation for the test set.</figcaption>
                     </figure>
                   </div>
                 </div>
@@ -156,14 +153,20 @@
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                   <div class="card-body">
-                    <p>The goal of these quarterly seminars is to highlight the opportunities provided to Canadian graduate students by the many and diverse astronomical observatories located in Canada or heavily involved in Canadian astronomy.
-                      During each session, an observatory will present its telescopes, instruments, and personnel. </p>
-                    <p>
-                    Since the goal is to bolster graduate student involvement at these institutions, the observatories will focus on how graduate students can implicate themselves in the observatory through research projects and/or observation time proposals.
-                    </p>
-                    <p>You can find more information here: <a class="text-info" target="_blank" href="https://casca.ca/?p=15573">CAnadian Telescope Seminars</a> </p>
                     <figure>
-                      <img class="w-100" src="images/CaTS-CFHT.png" />
+                      <img class="w-100" src="images/Network.jpg" />
+                      <figcaption>Fig. 5 -  Artificial Neural Network created for this work.</figcaption>
+                    </figure>
+                    <p>
+                      In <a href="https://arxiv.org/abs/2102.06230"> this work</a>, we apply an artificial neural network to combined-filter (SN1, SN2, and SN3) SITELLE data representing typical SIGNALS large program  observations.
+                      The  network  is  designed  to  calculate important emission-line ratios for HII-like regions which are present in the primary SITELLE filters.
+                      Our resultsindicate that the network can potentially constrain the line ratios with greater precision than the standard line fitting technique implemented in ORCS \textbf{if the source spectral properties are well represented in the training set}.
+                      Timing analysis indicates that the network can  analyze  the  entire  cube  approximately  100  times faster than the standard methods.
+                    </p>
+
+                    <figure>
+                      <img class="w-100" src="images/Ratio-Errors.jpg" />
+                      <figcaption>Fig. 6 -  Line Ratio Errors for the 8 line ratios studied in this work.</figcaption>
                     </figure>
 
                   </div>
@@ -181,12 +184,20 @@
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                   <div class="card-body">
-                        The GSC has obtained a standing monthly invitation to present at the CASCA CANVAS talks. After discussions with the organizers,
-                         we have agreed that the GSC will offer either one student an hour-long talk (including questions) or two students a 30-minute talk each (including questions).
-                         Several graduate students have already presented!
-                         <p>You can find more information at the <a href="https://astroherzberg.org/canvas/" target="_blank">CANVAS website</a></p>
-                         <p>Take a look at the CANVAS presentation by Myriam Prasow-Émond!</p>
-                         <iframe class="w-100 h-100" src="https://www.youtube.com/embed/9eH9beB9fX8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <figure>
+                      <img class="w-100" src="images/NN-confusion.png" />
+                      <figcaption>Fig. 7 -  Confusion matrix for the convolutional neural  network used to categorize the number of underlying line-of-sight emission components.</figcaption>
+                    </figure>
+                    <p>
+                      In this paper (in preparation), the third of the series, we develop a convolutional neural network to classify spectra as having either a sin-gle or double line-of-sight component.
+                      This systemati cmethod will be critical for disentangling components in merger systems, HII regions, and supernova remnants.We demonstrate that the network outperforms AIC andBayesian  inference  model  comparisons.
+                    </p>
+                    <figure>
+                      <img class="w-100" src="images/NGC2207.png" />
+                      <figcaption>Fig. 8 -  NGC2207-IC2163 merging system.  Left:  Deep SITELLE image of the N2207/IC2163 system created withORCS. This panel shows the stacked optical emission in the component galaxies.
+                        Several structures such as the spiral arms, bulges, tidal tails, merging region (green circle), and diffuse emission regions (purple circles) stand out.
+                        Right:  Component map for the NGC2207/IC2163 system.  White pixels correspond to double component emission.  Black pixels correspond to single component emission.</figcaption>
+                    </figure>
                   </div>
                 </div>
               </div>
@@ -222,7 +233,13 @@
                 </div>
                 <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
                   <div class="card-body">
-
+                  <p>
+                   We have demonstrated that machine learning is a viable method
+                    for emission line analysis . However, the training set must be developed with
+                    care. Moreover, we have shown that errors obtained using these methods are similar to those achieved
+                    with traditional methods Furthermore, machine learning algorithms are considerably less computationally
+                    expensive than traditional methods.
+                  </p>
                   </div>
                 </div>
               </div>

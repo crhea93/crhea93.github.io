@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="811a6d21-0703-43ad-b801-2a5c033d4af7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Talks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/crhea93.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crhea93.github.io.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Proposals.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Publications.html" beforeDir="false" afterPath="$PROJECT_DIR$/Publications.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Talks.html" beforeDir="false" afterPath="$PROJECT_DIR$/Talks.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

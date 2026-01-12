@@ -197,3 +197,26 @@ function isExists(elem){
 	}
 	return false;
 }
+
+// MOBILE MENU TOGGLE
+$(document).ready(function() {
+	$(".mobile-menu-toggle").on("click", function() {
+		$(this).toggleClass("active");
+		$(".nav-links").toggleClass("active");
+	});
+
+	// Close menu when clicking on a link
+	$(".nav-links a").on("click", function() {
+		$(".mobile-menu-toggle").removeClass("active");
+		$(".nav-links").removeClass("active");
+	});
+
+	// Close menu when clicking outside
+	$(document).on("click", function(event) {
+		if (!$(event.target).closest(".main-nav").length) {
+			$(".mobile-menu-toggle").removeClass("active");
+			$(".nav-links").removeClass("active");
+		}
+	});
+});
+

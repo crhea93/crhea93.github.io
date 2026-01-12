@@ -1,240 +1,1015 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
-<head>
-	<title>Projects</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8">
+    <head>
+        <title>Projects - Carter Rhea</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8" />
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <link rel="alternate icon" href="favicon.ico" />
 
+        <!-- SEO Meta Tags -->
+        <meta
+            name="description"
+            content="Explore Carter Rhea's software projects including dfreproject, LUCI, Pamplemousse, and machine learning tools for astronomical data analysis."
+        />
+        <meta
+            name="keywords"
+            content="Carter Rhea Projects, dfreproject, LUCI, Pamplemousse, Astronomical Software, GPU Computing, Python Packages"
+        />
+        <meta name="author" content="Carter Rhea" />
 
-	<!-- Font -->
+        <!-- Open Graph / Social Media Meta Tags -->
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://crhea93.github.io/Projects.html"
+        />
+        <meta property="og:title" content="Projects - Carter Rhea" />
+        <meta
+            property="og:description"
+            content="Software projects including GPU-accelerated astronomical tools, machine learning pipelines, and data analysis packages."
+        />
+        <meta
+            property="og:image"
+            content="https://crhea93.github.io/images/professional.png"
+        />
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura" rel="stylesheet">
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:url"
+            content="https://crhea93.github.io/Projects.html"
+        />
+        <meta name="twitter:title" content="Projects - Carter Rhea" />
+        <meta
+            name="twitter:description"
+            content="Software projects including GPU-accelerated astronomical tools, machine learning pipelines, and data analysis packages."
+        />
+        <meta
+            name="twitter:image"
+            content="https://crhea93.github.io/images/professional.png"
+        />
 
-	<!-- Stylesheets -->
+        <!-- Font -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura"
+            rel="stylesheet"
+        />
 
-	<link href="common-css/bootstrap.css" rel="stylesheet">
+        <!-- Stylesheets -->
+        <link href="common-css/bootstrap.css" rel="stylesheet" />
+        <link href="common-css/ionicons.css" rel="stylesheet" />
+        <link href="03-cv-business/css/styles.css" rel="stylesheet" />
+        <link href="03-cv-business/css/responsive.css" rel="stylesheet" />
 
-	<link href="common-css/ionicons.css" rel="stylesheet">
+        <style>
+            .projects-page {
+                background: var(--bg-light);
+            }
 
-	<link href="common-css/fluidbox.min.css" rel="stylesheet">
+            .project-card {
+                background: var(--bg-white);
+                border-radius: 16px;
+                padding: 40px;
+                margin-bottom: 50px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                transition: all 0.3s ease;
+                border-left: 4px solid transparent;
+            }
 
-	<link href="03-cv-business/css/styles.css" rel="stylesheet">
+            .project-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+                border-left-color: var(--primary-purple);
+            }
 
-	<link href="03-cv-business/css/responsive.css" rel="stylesheet">
+            .project-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 25px;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
 
-</head>
-<body>
+            .project-title {
+                margin: 0;
+                font-size: 2em;
+                color: var(--primary-slate);
+            }
 
-	<section class="intro-section">
-		<div class="container">
+            .project-title a {
+                color: var(--primary-slate);
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
 
-			<div class="heading-wrapper">
-				<div class="row">
-					<div class="col-sm-6 col-md-6 col-lg-4">
-						<div class="info">
-							<i class="icon ion-ios-location-outline"></i>
-							<div class="right-area">
-								<h5>204 Rue de L'Hôpital</h5>
-								<h5>Montréal, QC H2Y1V8</h5>
-							</div><!-- right-area -->
-						</div><!-- info -->
-					</div><!-- col-sm-4 -->
+            .project-title a:hover {
+                color: var(--primary-purple);
+            }
 
-					<div class="col-sm-6 col-md-6 col-lg-4">
-						<div class="info">
-							<i class="icon ion-ios-telephone-outline"></i>
-							<div class="right-area">
-								<h5>+1 504 706-5772</h5>
-								<h6>MON - FRI,8AM - 7PM</h6>
-							</div><!-- right-area -->
-						</div><!-- info -->
-					</div><!-- col-sm-4 -->
+            .project-tag {
+                display: inline-block;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 0.85em;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
 
-					<div class="col-sm-6 col-md-6 col-lg-4">
-						<div class="info">
-							<i class="icon ion-ios-chatboxes-outline"></i>
-							<div class="right-area">
-								<h5>carterrhea93@gmail.com</h5>
-								<h6>carterrhea@astro.umontreal.ca</h6>
-							</div><!-- right-area -->
-						</div><!-- info -->
-					</div><!-- col-sm-4 -->
-				</div><!-- row -->
-			</div><!-- heading-wrapper -->
+            .project-tag.astrophysics {
+                background: rgba(139, 92, 246, 0.1);
+                color: var(--primary-purple);
+            }
 
+            .project-tag.web-dev {
+                background: rgba(255, 107, 107, 0.1);
+                color: var(--primary-coral);
+            }
 
-			<div class="intro">
-				<div class="row">
+            .project-tag.machine-learning {
+                background: rgba(52, 211, 153, 0.1);
+                color: #10b981;
+            }
 
-					<div class="col-sm-8 col-md-4 col-lg-3">
-						<div class="profile-img margin-b-30"><img src="images/Paris.jpg" alt=""></div>
-					</div><!-- col-sm-8 -->
+            .project-subtitle {
+                font-size: 1.2em;
+                color: var(--text-light);
+                font-weight: 500;
+                margin-bottom: 25px;
+                padding-bottom: 15px;
+                border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+            }
 
-					<div class="col-sm-10 col-md-5 col-lg-6">
-							<h2><b>Carter Rhea</b></h2>
-							<h4 class="font-yellow">Graduate Student in Observational Astrophysics</h4>
-							<ul class="information margin-tb-30">
-								<li><b class="font-yellow">BORN</b> : September 7, 1993</li>
-							</ul>
-							<ul class="social-icons">
-								<li><a href="#"><i class="ion-social-linkedin"></i></a></li>
-								<li><a href="#"><i class="ion-social-instagram"></i></a></li>
-								<li><a href="#"><i class="ion-social-facebook"></i></a></li>
-							</ul>
-					</div><!-- col-sm-8 -->
+            .project-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                margin-bottom: 25px;
+            }
 
+            .project-description {
+                font-size: 1.05em;
+                line-height: 1.8;
+                color: var(--text-medium);
+            }
 
+            .project-links {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+                align-items: center;
+            }
 
-				</div><!-- row -->
+            .project-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 12px 24px;
+                border-radius: 10px;
+                font-weight: 600;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
 
-				<div class="row">
-					<div class="col-12">
-						<a class="downlad-btn info mr-2" href="files/Resume.pdf" target="_blank">Download CV</a>
-						<a class="downlad-btn mr-2" href="Projects.html">Projects</a>
-						<a class="downlad-btn mr-2" href="Publications.html">Publication List</a>
-						<a class="downlad-btn mr-2" href="Talks.html">Presentations</a>
-						<a class="downlad-btn mr-2" href="Proposals.html">Proposals</a>
-						<a class="downlad-btn mr-2" href="index.html">Home</a>
-					</div>
-				</div>
+            .project-btn.primary {
+                background: var(--gradient-primary);
+                color: #fff;
+                border: 2px solid transparent;
+            }
 
-			</div><!-- intro -->
-		</div><!-- container -->
-	</section><!-- intro-section -->
+            .project-btn.primary:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(139, 92, 246, 0.3);
+            }
 
+            .project-btn.secondary {
+                background: transparent;
+                color: var(--primary-purple);
+                border: 2px solid var(--primary-purple);
+            }
 
-	<section class="about-section section">
-		<div class="container">
-			<div class="row">
+            .project-btn.secondary:hover {
+                background: var(--primary-purple);
+                color: #fff;
+            }
 
-				<div class="col-sm-12 center-text">
-					<div class="heading ">
-						<h3><b><a href="https://crhea93.github.io/LUCI/index.html">LUCI</a></b></h3>
-						<h4>General Purpose Line Fitting Pipeline</h4>
-					</div>
-				</div><!-- col-sm-3 -->
-				<div class="col-sm-12 col-md-6">
-					<p class="margin-b-50">LUCI is a general purpose line fitting pipeline built specifically for the SITELLE
-					IFU at the Canada-France-Hawai'i Telescope that natively integrates machine learning techniques developed
-					for SITELLE.</p>
-				</div><!-- col-sm-6 -->
-				<div class="col-sm-12 col-md-6">
-					<p class="margin-b-30">
-						This software is heavily documented with a suite of examples, detailed explanations of the inner-workings,
-						and API documentation.
-						The primary site can be found at <a href="https://crhea93.github.io/LUCI/index.html">https://crhea93.github.io/LUCI/index.html</a>.
-					</p>
-				</div><!-- col-sm-6 -->
+            .project-highlights {
+                margin-top: 25px;
+                padding: 25px;
+                background: var(--bg-light);
+                border-radius: 12px;
+            }
 
-				<div class="col-sm-12 center-text">
-					<div class="heading ">
-						<h3><b><a href="https://cognitiveaffectivemaps.herokuapp.com/">Valence</a></b></h3>
-						<h4>Cognitive Affective Mapping Software</h4>
-					</div>
-				</div><!-- col-sm-3 -->
-				<div class="col-sm-12 col-md-6">
-					<p class="margin-b-50">The CAM software is a dynamic web app written in Django and JQuery that allows users to map out complex relations
-					and allows researchers to analyse their "mind-maps" qualitatively and quantitatively.</p>
-				</div><!-- col-sm-6 -->
-				<div class="col-sm-12 col-md-6">
-					<p class="margin-b-30">
-						This software was initially developed for the Basilie School at the University of Waterloo. I was additionally
-						contracted by the University of Freiburg for subsequent updates. This tool has been used recently in several publications.
-						It can be found at <a href="https://valence.cascadeinstitute.org/">https://valence.cascadeinstitute.org/</a>.
-					</p>
-				</div><!-- col-sm-6 -->
+            .project-highlights h4 {
+                margin: 0 0 15px 0;
+                font-size: 1.1em;
+                color: var(--primary-slate);
+            }
 
-				<div class="col-sm-12 center-text">
-					<div class="heading ">
-						<h3><b><a href="https://xtra-archive.com/">LEMUR</a></b></h3>
-						<h4>X-ray Galaxy Cluster Archive</h4>
-					</div>
-				</div><!-- col-sm-3 -->
-				<div class="col-sm-12 col-md-6">
-					<p class="margin-b-50">The LEMUR X-ray Galaxy Cluster Archive was born out of a desire to have a catalog of X-ray clusters
-					that anyone can access. The project has been a fantastic opportunity to perfect my X-ray data analysis skills and
-					work on the presentation of scientific findings.</p>
-				</div><!-- col-sm-6 -->
-				<div class="col-sm-12 col-md-6">
-					<p class="margin-b-30">
-						The hope for the catalog is that future astronomers will use the catalog as a jumping off point for
-						larger statistical analysis of clusters.
-						</p>
-				</div><!-- col-sm-6 -->
+            .highlight-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
 
-				<div class="col-sm-12 center-text">
-					<div class="heading ">
-						<h3><b><a href="https://cadena.ca/">Cadena</a></b></h3>
-						<h4>Sharing Economy Platform</h4>
-					</div>
-				</div><!-- col-sm-3 -->
-				<div class="col-sm-12 col-md-6">
-					<p class="margin-b-50">Cadena is as website where users can create and account and sell books for free! Unfortunately, most sites
-					require sellers to pay 20% of the sales proceeds to the company... With Cadena, we have done away with that practice and
-					simply encourage users to donate if they were pleased the transaction!</p>
-				</div><!-- col-sm-6 -->
-				<div class="col-sm-12 col-md-6">
-					<p class="margin-b-30">
-						This was my first project using Django... really the first web-app I wrote. Along with co-developper, Christian Thibeault,
-						I mastered Django and managed to create a complex and rich web app ecosystem.
-					</p>
-				</div><!-- col-sm-6 -->
+            .highlight-list li {
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+                margin-bottom: 12px;
+                font-size: 1em;
+                color: var(--text-medium);
+            }
 
-				<div class="col-sm-12 center-text">
-					<div class="heading ">
-						<h3><b>AstronomyTools</b></h3>
-						<h4>Suite of Astronomy Data Analysis Tools</h4>
-					</div>
-				</div><!-- col-sm-3 -->
-				<div class="col-sm-12 col-md-6">
-					<p class="margin-b-50">The following set of files/projects was born from my desire to share the code I wrote with any interested party!
-						I strongly believe that science must be open source and I hope these pages will help.</p>
-				</div><!-- col-sm-6 -->
-				<div class="col-sm-12 col-md-6">
-					<p class="margin-b-30">
-						This repository contains a varied mix of files for astronomical data analysis. You can find all pertinent information at the following address:
-						<a href="https://github.com/crhea93/AstronomyToolsSite">https://github.com/crhea93/AstronomyToolsSite</a>
-					</p>
-				</div><!-- col-sm-6 -->
+            .highlight-list li:before {
+                content: "✓";
+                color: var(--primary-purple);
+                font-weight: bold;
+                font-size: 1.2em;
+                flex-shrink: 0;
+            }
 
-			</div>
-		</div>
-	</section>
+            .tech-stack {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 20px;
+            }
 
+            .tech-badge {
+                padding: 6px 14px;
+                background: rgba(255, 255, 255, 0.8);
+                border: 1px solid var(--lighter-slate);
+                border-radius: 6px;
+                font-size: 0.85em;
+                color: var(--text-dark);
+                font-weight: 500;
+            }
 
+            @media (max-width: 768px) {
+                .project-content {
+                    grid-template-columns: 1fr;
+                }
 
+                .project-header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+        </style>
+    </head>
+    <body class="projects-page">
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="container">
+                <a href="index.html" class="logo">Carter Rhea</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Projects.html" class="active">Projects</a></li>
+                    <li><a href="Publications.html">Publications</a></li>
+                    
+                    
+                </ul>
+            </div>
+        </nav>
 
+        <!-- Header Section -->
+        <section class="intro-section">
+            <div class="container">
+                <div class="intro" style="text-align: center">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 col-md-6 col-lg-4">
+                            <div
+                                class="profile-img margin-b-30"
+                                style="margin: 0 auto"
+                            >
+                                <img
+                                    src="images/professional.png"
+                                    alt="Carter Rhea"
+                                />
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <h2
+                                style="
+                                    color: #fff;
+                                    margin-bottom: 20px;
+                                    margin-top: 30px;
+                                "
+                            >
+                                <b>Carter Rhea</b>
+                            </h2>
+                            <h4 class="font-yellow" style="margin-bottom: 10px">
+                                Ph.D. Observational Astrophysics
+                            </h4>
+                            <h5
+                                style="
+                                    color: rgba(255, 255, 255, 0.9);
+                                    font-weight: 400;
+                                    margin-bottom: 40px;
+                                "
+                            >
+                                Algorithm & Software Developer at Dragonfly FRO
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Projects Section -->
+        <section class="section" style="padding-top: 60px">
+            <div class="container">
+                <!-- dfreproject -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2 class="project-title">
+                            <a
+                                href="https://github.com/crhea93/dfreproject"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <i class="icon ion-ios-link"></i> dfreproject
+                            </a>
+                        </h2>
+                        <div>
+                            <span class="project-tag astrophysics"
+                                >Astrophysics</span
+                            >
+                            <span class="project-tag machine-learning"
+                                >GPU Computing</span
+                            >
+                        </div>
+                    </div>
 
+                    <h3 class="project-subtitle">
+                        GPU-Optimized Astronomical Image Reprojection
+                    </h3>
 
-	<footer>
-		<p class="copyright">
-			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-		</p>
-	</footer>
+                    <div class="project-content">
+                        <div class="project-description">
+                            <p>
+                                dfreproject is a high-performance Python package
+                                for astronomical image reprojection, optimized
+                                for both GPU and CPU execution. Developed for
+                                the Dragonfly Telephoto Array, it addresses the
+                                computational bottleneck of aligning and
+                                stacking astronomical images by providing
+                                GPU-accelerated coordinate transformations and
+                                interpolation.
+                            </p>
+                            <p>
+                                The package achieves up to 20X speedup on GPUs
+                                and 10X on CPUs compared to traditional methods,
+                                making it essential for processing large volumes
+                                of data from modern wide-field imaging surveys.
+                                Published in the Journal of Open Source Software
+                                (JOSS), dfreproject follows FITS and SIP
+                                standards for maximum compatibility.
+                            </p>
+                        </div>
 
+                        <div class="project-highlights">
+                            <h4>Key Features</h4>
+                            <ul class="highlight-list">
+                                <li>
+                                    GPU-accelerated Gnomonic projection
+                                    transformations
+                                </li>
+                                <li>
+                                    Up to 20X speedup over traditional methods
+                                </li>
+                                <li>FITS and SIP format compliant</li>
+                                <li>
+                                    Single function call for complete
+                                    reprojection
+                                </li>
+                                <li>Designed for Dragonfly Telephoto Array</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">CuPy</span>
+                                <span class="tech-badge">NumPy</span>
+                                <span class="tech-badge">Astropy</span>
+                                <span class="tech-badge">CUDA</span>
+                            </div>
+                        </div>
+                    </div>
 
-	<!-- SCIPTS -->
+                    <div class="project-links">
+                        <a
+                            href="https://github.com/crhea93/dfreproject"
+                            class="project-btn primary"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <i class="icon ion-social-github"></i> GitHub
+                        </a>
+                        <a
+                            href="https://joss.theoj.org/papers/10.21105/joss.08525"
+                            class="project-btn secondary"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <i class="icon ion-ios-document"></i> JOSS Paper
+                        </a>
+                    </div>
+                </div>
 
-	<script src="common-js/jquery-3.2.1.min.js"></script>
+                <!-- LUCI Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2 class="project-title">
+                            <a
+                                href="https://crhea93.github.io/LUCI/index.html"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <i class="icon ion-ios-link"></i> LUCI
+                            </a>
+                        </h2>
+                        <div>
+                            <span class="project-tag astrophysics"
+                                >Astrophysics</span
+                            >
+                            <span class="project-tag machine-learning"
+                                >Machine Learning</span
+                            >
+                        </div>
+                    </div>
 
-	<script src="common-js/tether.min.js"></script>
+                    <h3 class="project-subtitle">
+                        General Purpose Line Fitting Pipeline
+                    </h3>
 
-	<script src="common-js/bootstrap.js"></script>
+                    <div class="project-content">
+                        <div class="project-description">
+                            <p>
+                                LUCI is a comprehensive line fitting pipeline
+                                built specifically for the SITELLE IFU at the
+                                Canada-France-Hawai'i Telescope. It natively
+                                integrates cutting-edge machine learning
+                                techniques to provide accurate and efficient
+                                spectral analysis.
+                            </p>
+                            <p>
+                                The software features extensive documentation,
+                                including detailed examples, explanations of the
+                                underlying algorithms, and complete API
+                                documentation. LUCI represents a significant
+                                advancement in automated spectroscopy analysis
+                                for large-scale IFU surveys.
+                            </p>
+                        </div>
 
-	<script src="common-js/isotope.pkgd.min.js"></script>
+                        <div class="project-highlights">
+                            <h4>Key Features</h4>
+                            <ul class="highlight-list">
+                                <li>
+                                    ML-powered emission line detection and
+                                    classification
+                                </li>
+                                <li>Automated velocity field extraction</li>
+                                <li>Multi-component spectral fitting</li>
+                                <li>
+                                    Comprehensive documentation and examples
+                                </li>
+                                <li>Integration with SITELLE data pipeline</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">TensorFlow</span>
+                                <span class="tech-badge">Astropy</span>
+                                <span class="tech-badge">NumPy</span>
+                            </div>
+                        </div>
+                    </div>
 
-	<script src="common-js/jquery.waypoints.min.js"></script>
+                    <div class="project-links">
+                        <a
+                            href="https://crhea93.github.io/LUCI/index.html"
+                            class="project-btn primary"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <i class="icon ion-ios-book"></i> Documentation
+                        </a>
+                        <a
+                            href="https://github.com/crhea93/LUCI"
+                            class="project-btn secondary"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <i class="icon ion-social-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
 
-	<script src="common-js/progressbar.min.js"></script>
+                <!-- Pamplemousse Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2 class="project-title">
+                            <a
+                                href="https://github.com/sitelle-signals/Pamplemousse"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <i class="icon ion-ios-link"></i> Pamplemousse
+                            </a>
+                        </h2>
+                        <div>
+                            <span class="project-tag astrophysics"
+                                >Astrophysics</span
+                            >
+                            <span class="project-tag machine-learning"
+                                >Machine Learning</span
+                            >
+                        </div>
+                    </div>
 
-	<script src="common-js/jquery.fluidbox.min.js"></script>
+                    <h3 class="project-subtitle">
+                        Advanced ML Tools for SITELLE Spectroscopy
+                    </h3>
 
-	<script src="common-js/scripts.js"></script>
+                    <div class="project-content">
+                        <div class="project-description">
+                            <p>
+                                Pamplemousse is a suite of advanced machine
+                                learning applications designed specifically for
+                                the SITELLE imaging Fourier transform
+                                spectrometer at CFHT. Building on the LUCI
+                                pipeline, Pamplemousse provides cutting-edge
+                                tools for emission line classification,
+                                kinematic analysis, and spectral decomposition
+                                using state-of-the-art deep learning
+                                architectures.
+                            </p>
+                            <p>
+                                The package implements convolutional neural
+                                networks for automated HII region
+                                classification, mixture density networks for
+                                multi-component line fitting, and specialized
+                                algorithms for handling the unique
+                                characteristics of SITELLE data. These tools
+                                have been instrumental in several publications
+                                and are used by the SIGNALS collaboration.
+                            </p>
+                        </div>
 
-</body>
+                        <div class="project-highlights">
+                            <h4>Key Features</h4>
+                            <ul class="highlight-list">
+                                <li>
+                                    CNN-based emission line region
+                                    classification
+                                </li>
+                                <li>
+                                    Mixture density networks for spectral
+                                    decomposition
+                                </li>
+                                <li>Automated HII region identification</li>
+                                <li>Kinematic analysis tools</li>
+                                <li>Integration with SIGNALS survey data</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">PyTorch</span>
+                                <span class="tech-badge">TensorFlow</span>
+                                <span class="tech-badge">Scikit-learn</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="https://github.com/sitelle-signals/Pamplemousse"
+                            class="project-btn primary"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <i class="icon ion-social-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RIM X-ray Deconvolution Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2 class="project-title">
+                            <a
+                                href="https://arxiv.org/abs/2311.18014"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <i class="icon ion-ios-link"></i> Recurrent
+                                Inference Machine for X-ray Spectroscopy
+                            </a>
+                        </h2>
+                        <div>
+                            <span class="project-tag astrophysics"
+                                >Astrophysics</span
+                            >
+                            <span class="project-tag machine-learning"
+                                >Machine Learning</span
+                            >
+                        </div>
+                    </div>
+
+                    <h3 class="project-subtitle">
+                        Deep Learning for X-ray Spectral Deconvolution
+                    </h3>
+
+                    <div class="project-content">
+                        <div class="project-description">
+                            <p>
+                                This project introduces a novel recurrent neural
+                                network architecture for deconvolving X-ray
+                                spectra from galaxy clusters. The Recurrent
+                                Inference Machine (RIM) addresses the
+                                fundamental challenge of extracting accurate
+                                temperature and abundance measurements from
+                                complex, multi-temperature X-ray emission by
+                                learning to iteratively refine spectral
+                                decompositions.
+                            </p>
+                            <p>
+                                Presented at the NeurIPS 2023 Machine Learning
+                                and the Physical Sciences workshop, this work
+                                demonstrates how physics-informed deep learning
+                                can solve inverse problems in astrophysics. The
+                                method achieves superior performance compared to
+                                traditional fitting techniques, particularly in
+                                handling overlapping spectral components and low
+                                signal-to-noise data.
+                            </p>
+                        </div>
+
+                        <div class="project-highlights">
+                            <h4>Key Features</h4>
+                            <ul class="highlight-list">
+                                <li>
+                                    Recurrent neural network for iterative
+                                    refinement
+                                </li>
+                                <li>Physics-informed architecture design</li>
+                                <li>Multi-temperature component separation</li>
+                                <li>
+                                    Robust to low signal-to-noise conditions
+                                </li>
+                                <li>Published at NeurIPS ML4PS 2023</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">PyTorch</span>
+                                <span class="tech-badge">XSPEC</span>
+                                <span class="tech-badge">Astropy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="https://arxiv.org/abs/2311.18014"
+                            class="project-btn primary"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <i class="icon ion-ios-document"></i> arXiv Paper
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Valence Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2 class="project-title">
+                            <a
+                                href="https://valence.cascadeinstitute.org/"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <i class="icon ion-ios-link"></i> Valence
+                            </a>
+                        </h2>
+                        <span class="project-tag web-dev">Web Development</span>
+                    </div>
+
+                    <h3 class="project-subtitle">
+                        Cognitive Affective Mapping Software
+                    </h3>
+
+                    <div class="project-content">
+                        <div class="project-description">
+                            <p>
+                                Valence is a sophisticated web application built
+                                with Django and jQuery that enables users to
+                                create cognitive-affective maps—visual
+                                representations of complex mental models and
+                                emotional associations. The platform provides
+                                researchers with powerful tools for qualitative
+                                and quantitative analysis of these cognitive
+                                structures.
+                            </p>
+                            <p>
+                                Originally developed for the Basilie School at
+                                the University of Waterloo and later enhanced
+                                through a contract with the University of
+                                Freiburg, Valence has been instrumental in
+                                several published research studies on cognition
+                                and decision-making.
+                            </p>
+                        </div>
+
+                        <div class="project-highlights">
+                            <h4>Key Features</h4>
+                            <ul class="highlight-list">
+                                <li>Interactive mind-map creation interface</li>
+                                <li>Real-time collaborative mapping</li>
+                                <li>
+                                    Advanced analytics and visualization tools
+                                </li>
+                                <li>
+                                    Export capabilities for research publication
+                                </li>
+                                <li>Multi-institutional deployment</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Django</span>
+                                <span class="tech-badge">jQuery</span>
+                                <span class="tech-badge">PostgreSQL</span>
+                                <span class="tech-badge">D3.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="https://valence.cascadeinstitute.org/"
+                            class="project-btn primary"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <i class="icon ion-ios-world"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LEMUR Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2 class="project-title">
+                            <a
+                                href="https://xtra-archive.com/"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <i class="icon ion-ios-link"></i> LEMUR
+                            </a>
+                        </h2>
+                        <span class="project-tag astrophysics"
+                            >Astrophysics</span
+                        >
+                    </div>
+
+                    <h3 class="project-subtitle">
+                        X-ray Galaxy Cluster Archive
+                    </h3>
+
+                    <div class="project-content">
+                        <div class="project-description">
+                            <p>
+                                The LEMUR (Led by Extreme Multi-wavelength
+                                Understanding Research) X-ray Galaxy Cluster
+                                Archive provides open access to a comprehensive
+                                catalog of X-ray observations of galaxy
+                                clusters. This project combines automated data
+                                reduction pipelines with systematic analysis to
+                                create a valuable resource for the astrophysics
+                                community.
+                            </p>
+                            <p>
+                                The archive serves as a foundation for
+                                large-scale statistical studies of galaxy
+                                cluster properties, evolution, and cosmological
+                                implications. It showcases advanced X-ray data
+                                analysis techniques and effective presentation
+                                of complex scientific data.
+                            </p>
+                        </div>
+
+                        <div class="project-highlights">
+                            <h4>Key Features</h4>
+                            <ul class="highlight-list">
+                                <li>Automated Chandra X-ray data reduction</li>
+                                <li>
+                                    Systematic spectral and spatial analysis
+                                </li>
+                                <li>
+                                    Interactive catalog with search capabilities
+                                </li>
+                                <li>Downloadable reduced data products</li>
+                                <li>Publication-ready visualizations</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">CIAO</span>
+                                <span class="tech-badge">Astropy</span>
+                                <span class="tech-badge">Web Scraping</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="https://xtra-archive.com/"
+                            class="project-btn primary"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <i class="icon ion-ios-filing"></i> View Archive
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cadena Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2 class="project-title">
+                            <a
+                                href="https://cadena.ca/"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <i class="icon ion-ios-link"></i> Cadena
+                            </a>
+                        </h2>
+                        <span class="project-tag web-dev">Web Development</span>
+                    </div>
+
+                    <h3 class="project-subtitle">Fee-Free Book Marketplace</h3>
+
+                    <div class="project-content">
+                        <div class="project-description">
+                            <p>
+                                Cadena is an innovative sharing economy platform
+                                that enables users to buy and sell books without
+                                the typical 20% platform fees charged by
+                                competitors. Built as a full-stack Django
+                                application, Cadena operates on a donation-based
+                                model, encouraging users to contribute
+                                voluntarily after successful transactions.
+                            </p>
+                            <p>
+                                This was my first major web development project,
+                                developed in collaboration with Christian
+                                Thibeault. Through this project, I gained
+                                expertise in Django, built a complex
+                                authentication system, payment processing, and
+                                learned the fundamentals of creating a
+                                production-ready web application ecosystem.
+                            </p>
+                        </div>
+
+                        <div class="project-highlights">
+                            <h4>Key Features</h4>
+                            <ul class="highlight-list">
+                                <li>
+                                    User authentication and profile management
+                                </li>
+                                <li>Book listing with image uploads</li>
+                                <li>Integrated messaging system</li>
+                                <li>Transaction management</li>
+                                <li>Voluntary donation system</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Django</span>
+                                <span class="tech-badge">PostgreSQL</span>
+                                <span class="tech-badge">Bootstrap</span>
+                                <span class="tech-badge">Stripe API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="https://cadena.ca/"
+                            class="project-btn primary"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <i class="icon ion-ios-cart"></i> Visit Site
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AstronomyTools Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2 class="project-title">
+                            <a
+                                href="https://github.com/crhea93/AstronomyToolsSite"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <i class="icon ion-ios-link"></i> AstronomyTools
+                            </a>
+                        </h2>
+                        <div>
+                            <span class="project-tag astrophysics"
+                                >Astrophysics</span
+                            >
+                            <span class="project-tag machine-learning"
+                                >Machine Learning</span
+                            >
+                        </div>
+                    </div>
+
+                    <h3 class="project-subtitle">
+                        Open Source Astronomy Data Analysis Suite
+                    </h3>
+
+                    <div class="project-content">
+                        <div class="project-description">
+                            <p>
+                                AstronomyTools is a comprehensive collection of
+                                Python utilities and analysis scripts for
+                                astronomical data processing. Born from a
+                                commitment to open science, this repository
+                                shares battle-tested code developed throughout
+                                my research career, making advanced analysis
+                                techniques accessible to the broader astronomy
+                                community.
+                            </p>
+                            <p>
+                                The toolkit includes modules for X-ray
+                                spectroscopy, optical data reduction, machine
+                                learning applications in astronomy, and various
+                                visualization utilities. All tools are
+                                well-documented and designed to be easily
+                                integrated into existing analysis pipelines.
+                            </p>
+                        </div>
+
+                        <div class="project-highlights">
+                            <h4>Key Features</h4>
+                            <ul class="highlight-list">
+                                <li>X-ray spectral analysis tools</li>
+                                <li>IFU data reduction utilities</li>
+                                <li>ML-based source classification</li>
+                                <li>Automated data quality assessment</li>
+                                <li>Publication-ready plotting functions</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Scikit-learn</span>
+                                <span class="tech-badge">Matplotlib</span>
+                                <span class="tech-badge">Astropy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a
+                            href="https://github.com/crhea93/AstronomyToolsSite"
+                            class="project-btn primary"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <i class="icon ion-social-github"></i> GitHub
+                            Repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p class="copyright">
+                Copyright &copy;
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+                All rights reserved | This template is made with
+                <i class="ion-heart" aria-hidden="true"></i> by
+                <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            </p>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="common-js/jquery-3.2.1.min.js"></script>
+        <script src="common-js/bootstrap.js"></script>
+    </body>
 </html>

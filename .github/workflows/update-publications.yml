@@ -1,0 +1,37 @@
+name: Update Publications
+
+on:
+  schedule:
+    # Run every day at midnight UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-publications:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      - name: Fetch publications from ADS
+        env:
+          ADS_API_KEY: ${{ secrets.ADS_API_KEY }}
+        run: |
+          python scripts/fetch_publications.py
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add data/publications.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update publications data" && git push)

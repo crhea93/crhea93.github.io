@@ -1,396 +1,226 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Publications</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/css/mdb.min.css" rel="stylesheet">
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/js/mdb.min.js"></script>
+    <head>
+        <title>Publications - Carter Rhea</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8" />
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <link rel="alternate icon" href="favicon.ico" />
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura" rel="stylesheet">
+        <!-- SEO Meta Tags -->
+        <meta
+            name="description"
+            content="Academic publications by Carter Rhea in astrophysics, machine learning, and X-ray spectroscopy. Peer-reviewed articles from leading astronomy journals."
+        />
+        <meta
+            name="keywords"
+            content="Carter Rhea Publications, Astrophysics Research, Machine Learning Astronomy, X-ray Spectroscopy, SITELLE, Galaxy Clusters"
+        />
+        <meta name="author" content="Carter Rhea" />
 
-    <!-- Stylesheets -->
+        <!-- Open Graph / Social Media Meta Tags -->
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://crhea93.github.io/Publications.html"
+        />
+        <meta property="og:title" content="Publications - Carter Rhea" />
+        <meta
+            property="og:description"
+            content="Academic publications in astrophysics, machine learning, and X-ray spectroscopy from leading astronomy journals."
+        />
+        <meta
+            property="og:image"
+            content="https://crhea93.github.io/images/professional.png"
+        />
 
-    <link href="common-css/bootstrap.css" rel="stylesheet">
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:url"
+            content="https://crhea93.github.io/Publications.html"
+        />
+        <meta name="twitter:title" content="Publications - Carter Rhea" />
+        <meta
+            name="twitter:description"
+            content="Academic publications in astrophysics, machine learning, and X-ray spectroscopy from leading astronomy journals."
+        />
+        <meta
+            name="twitter:image"
+            content="https://crhea93.github.io/images/professional.png"
+        />
 
-    <link href="common-css/ionicons.css" rel="stylesheet">
+        <!-- Font -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura"
+            rel="stylesheet"
+        />
 
-    <link href="common-css/fluidbox.min.css" rel="stylesheet">
+        <!-- Stylesheets -->
+        <link href="common-css/bootstrap.css" rel="stylesheet" />
+        <link href="common-css/ionicons.css" rel="stylesheet" />
+        <link href="03-cv-business/css/styles.css" rel="stylesheet" />
+        <link href="03-cv-business/css/responsive.css" rel="stylesheet" />
+        <link href="common-css/publications.css" rel="stylesheet" />
+    </head>
+    <body class="publications-page">
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="container">
+                <a href="index.html" class="logo">Carter Rhea</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li>
+                        <a href="Publications.html" class="active"
+                            >Publications</a
+                        >
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </nav>
 
-    <link href="03-cv-business/css/styles.css" rel="stylesheet">
+        <!-- Header Section -->
+        <section class="intro-section">
+            <div class="container">
+                <div class="intro" style="text-align: center">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 col-md-6 col-lg-4">
+                            <div
+                                class="profile-img margin-b-30"
+                                style="margin: 0 auto"
+                            >
+                                <img
+                                    src="images/professional.png"
+                                    alt="Carter Rhea"
+                                />
+                            </div>
+                        </div>
+                    </div>
 
-    <link href="03-cv-business/css/responsive.css" rel="stylesheet">
-
-</head>
-<body>
-
-
-<section class="intro-section">
-    <div class="container">
-
-        <div class="heading-wrapper">
-            <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-4">
-                    <div class="info">
-                        <i class="icon ion-ios-location-outline"></i>
-                        <div class="right-area">
-                            <h5>204 Rue de L'Hôpital</h5>
-                            <h5>Montréal, QC H2Y1V8</h5>
-                        </div><!-- right-area -->
-                    </div><!-- info -->
-                </div><!-- col-sm-4 -->
-
-                <div class="col-sm-6 col-md-6 col-lg-4">
-                    <div class="info">
-                        <i class="icon ion-ios-telephone-outline"></i>
-                        <div class="right-area">
-                            <h5>+1 504 706-5772</h5>
-                            <h6>MON - FRI,8AM - 7PM</h6>
-                        </div><!-- right-area -->
-                    </div><!-- info -->
-                </div><!-- col-sm-4 -->
-
-                <div class="col-sm-6 col-md-6 col-lg-4">
-                    <div class="info">
-                        <i class="icon ion-ios-chatboxes-outline"></i>
-                        <div class="right-area">
-                            <h5>carterrhea93@gmail.com</h5>
-                            <h6>carterrhea@astro.umontreal.ca</h6>
-                        </div><!-- right-area -->
-                    </div><!-- info -->
-                </div><!-- col-sm-4 -->
-            </div><!-- row -->
-        </div><!-- heading-wrapper -->
-
-
-        <div class="intro">
-            <div class="row">
-
-                <div class="col-sm-8 col-md-4 col-lg-3">
-                    <div class="profile-img margin-b-30"><img src="images/Paris.jpg" alt=""></div>
-                </div><!-- col-sm-8 -->
-
-                <div class="col-sm-10 col-md-5 col-lg-6">
-                    <h2><b>Carter Rhea</b></h2>
-                    <h4 class="font-yellow">Graduate Student in Observational Astrophysics</h4>
-                    <ul class="information margin-tb-30">
-                        <li><b class="font-yellow">BORN</b> : September 7, 1993</li>
-                    </ul>
-                    <ul class="social-icons">
-                        <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
-                        <li><a href="#"><i class="ion-social-instagram"></i></a></li>
-                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                    </ul>
-                </div><!-- col-sm-8 -->
-
-            </div><!-- row -->
-
-            <div class="row">
-                <div class="col-12">
-                    <a class="downlad-btn info mr-2" href="files/Resume.pdf" target="_blank">Download CV</a>
-                    <a class="downlad-btn mr-2" href="Projects.html">Projects</a>
-                    <a class="downlad-btn mr-2" href="Publications.html">Publication List</a>
-                    <a class="downlad-btn mr-2" href="Talks.html">Presentations</a>
-                    <a class="downlad-btn mr-2" href="Proposals.html">Proposals</a>
-                    <a class="downlad-btn mr-2" href="index.html">Home</a>
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <h2
+                                style="
+                                    color: #fff;
+                                    margin-bottom: 20px;
+                                    margin-top: 30px;
+                                "
+                            >
+                                <b>Carter Rhea</b>
+                            </h2>
+                            <h4 class="font-yellow" style="margin-bottom: 10px">
+                                Ph.D. Observational Astrophysics
+                            </h4>
+                            <h5
+                                style="
+                                    color: rgba(255, 255, 255, 0.9);
+                                    font-weight: 400;
+                                    margin-bottom: 40px;
+                                "
+                            >
+                                Algorithm & Software Developer at Dragonfly FRO
+                            </h5>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-        </div><!-- intro -->
-    </div><!-- container -->
-</section><!-- intro-section -->
+        <!-- Statistics Section -->
+        <section class="publication-stats">
+            <div class="container">
+                <div id="publication-stats"></div>
+            </div>
+        </section>
 
-<div class="container-fluid col-md-12 mt-5 mb-5">
-<div class="card">
-    <div class="card-header">
-        Publication List
-    </div>
-        <div class="card">
-            <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                <thead>
-                <tr>
-                    <th class="th-sm text-capitalize font-weight-bold">Title
-                    </th>
-                    <th class="th-sm text-capitalize font-weight-bold">First Author
-                    </th>
-                    <th class="th-sm text-capitalize font-weight-bold">Date
-                    </th>
-                    <th class="th-sm text-capitalize font-weight-bold">Publication
-                    </th>
-                    <th class="th-sm text-capitalize font-weight-bold">Link
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Unraveling the Mysteries of Galaxy Clusters: Recurrent Inference Deconvolution of X-ray Spectra</td>
-                    <td>Carter Rhea</td>
-                    <td>2023</td>
-                    <td>NeurIPS ML4PS Conference</td>
-                    <td>https://arxiv.org/abs/2311.18014</td>
-                </tr>
-                <tr>
-                    <td>Rapid Spectral Parameter Prediction for Black Hole X-Ray Binaries using Physicalised Autoencoders</td>
-                    <td>Ethan Tregidga</td>
-                    <td>2023</td>
-                    <td>MNRAS</td>
-                    <td>https://arxiv.org/abs/2310.17249</td>
-                </tr>
-                <tr>
-                    <td>A Machine Learning Approach to Galactic Emission-Line Region Classification</td>
-                    <td>Carter Rhea</td>
-                    <td>2023</td>
-                    <td>RAS Techniques and Instruments</td>
-                    <td>https://arxiv.org/abs/2306.11545</td>
-                </tr>
-                <tr>
-                    <td>Predicting the issuance of COVID-19 stay-at-home orders in Africa: Using machine learning to develop insight for health policy research</td>
-                    <td>Jordan Mansell</td>
-                    <td>2023</td>
-                    <td>International Journal of Disaster Risk Reduction</td>
-                    <td>https://pubmed.ncbi.nlm.nih.gov/36875319/</td>
-                </tr>
-                 <tr>
-                    <td>Extended Line Emission in the BCG of Abell 2390</td>
-                    <td>Leo Alcorn</td>
-                    <td>2023</td>
-                    <td>Monthly Notices of the Royal Astronomical Society</td>
-                    <td>https://arxiv.org/abs/2303.15557</td>
-                </tr>
-                <tr>
-                    <td>Direct assessment of individual connotation and experience: An introduction to cognitive-affective mapping</td>
-                    <td>Lisa Reuter</td>
-                    <td>2022</td>
-                    <td>Politics and the Life Sciences</td>
-                    <td></td>
-                </tr>
+        <!-- Publications Section -->
+        <section class="section" style="padding-top: 60px">
+            <div class="container">
+                <!-- Controls -->
+                <div class="publications-controls">
+                    <div class="controls-row">
+                        <!-- Filters -->
+                        <div class="filter-group">
+                            <button class="filter-btn active" data-filter="all">
+                                All Publications
+                            </button>
+                            <button
+                                class="filter-btn"
+                                data-filter="first-author"
+                            >
+                                First Author
+                            </button>
+                            <button class="filter-btn" data-filter="co-author">
+                                Co-Author
+                            </button>
+                            <button class="filter-btn" data-filter="refereed">
+                                Refereed Only
+                            </button>
+                        </div>
 
-                <tr>
-                    <td>An Assessment of the In-Situ Growth of the Intracluster Light in the High Redshift Galaxy Cluster SpARCS1049+56</td>
-                    <td>Capucine Barfety</td>
-                    <td>2022</td>
-                    <td>Astrophysical Journal</td>
-                    <td><a href="https://arxiv.org/abs/2203.13764">https://arxiv.org/abs/2203.13764</a></td>
-                </tr>
+                        <!-- Search & Sort -->
+                        <div class="search-group">
+                            <div class="search-box">
+                                <i class="icon ion-ios-search"></i>
+                                <input
+                                    type="text"
+                                    id="publication-search"
+                                    placeholder="Search publications..."
+                                />
+                            </div>
 
-                <tr>
-                    <td>Extended radio emission in the galaxy cluster MS 0735.6+7421 detected with the Karl G. Jansky Very Large Array</td>
-                    <td>Théophile Bégin</td>
-                    <td>2022</td>
-                    <td>MNRAS</td>
-                    <td><a href="https://arxiv.org/abs/2202.01235">https://arxiv.org/abs/2202.01235</a></td>
-                </tr>
+                            <div class="sort-group">
+                                <label for="sort-select">Sort:</label>
+                                <select id="sort-select">
+                                    <option value="date-desc">
+                                        Newest First
+                                    </option>
+                                    <option value="date-asc">
+                                        Oldest First
+                                    </option>
+                                    <option value="citations">
+                                        Most Cited
+                                    </option>
+                                    <option value="title">Title (A-Z)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <tr>
-                    <td>Measuring attitudes as a complex system: Structured thinking and support for the Canadian carbon tax</td>
-                    <td>Jordan Mansell</td>
-                    <td>2021</td>
-                    <td>Politics and the Life Sciences</td>
-                    <td></td>
-                </tr>
+                <!-- Publications List -->
+                <div id="publications-container">
+                    <!-- Publications will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
 
+        <footer>
+            <p class="copyright">
+                Copyright &copy;
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+                All rights reserved | This template is made with
+                <i class="ion-heart" aria-hidden="true"></i> by
+                <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            </p>
+        </footer>
 
-                <tr>
-                    <td>Updates to LUCI: A New Fitting Paradigm Using Mixture Density Networks</td>
-                    <td>Carter Rhea</td>
-                    <td>2021</td>
-                    <td>Research Notes of the American Astronomical Society</td>
-                    <td><a href="https://arxiv.org/abs/2111.12755">https://arxiv.org/abs/2111.12755</a></td>
-                </tr>
-
-                <tr>
-                    <td>Direct Assessment of Individual Connotation and Experience: An Introduction to Cognitive-Affective Mapping</td>
-                    <td>Jordan Mansell</td>
-                    <td>2021</td>
-                    <td>Journal of Politics and Life Sciences</td>
-                    <td><a href="https://www.cambridge.org/core/journals/politics-and-the-life-sciences/article/direct-assessment-of-individual-connotation-and-experience-an-introduction-to-cognitiveaffective-mapping/38793BEC9A726082785A38757E5D3476">Cambridge University Press</a></td>
-                </tr>
-
-                <tr>
-                    <td>A Machine Learning Approach to Integral Field Unit Spectroscopy Observations: III. Disentangling Multiple Components in Hii regions  </td>
-                    <td>Carter Rhea</td>
-                    <td>2021</td>
-                    <td>Astrophysical Journal</td>
-                    <td><a href="https://arxiv.org/abs/2110.00569">https://arxiv.org/abs/2110.00569  </a></td>
-                </tr>
-
-                <tr>
-                    <td>LUCI: A Python package for SITELLE spectral analysis </td>
-                    <td>Carter Rhea</td>
-                    <td>2021</td>
-                    <td>Research Notes of the American Astronomical Association</td>
-                    <td><a href="https://arxiv.org/abs/2108.12428">https://arxiv.org/abs/2108.12428 </a></td>
-                </tr>
-
-                <tr>
-                    <td>A Data-driven Approach to X-ray Spectral Fitting: Quasi-Deconvolution </td>
-                    <td>Carter Rhea</td>
-                    <td>2021</td>
-                    <td>Research Notes of the American Astronomical Association</td>
-                    <td><a href="https://arxiv.org/abs/2105.09470">https://arxiv.org/abs/2105.09470</a></td>
-                </tr>
-
-                <tr>
-                    <td>A Novel Network Approach to Capture Cognition and Affect: COVID-19 Experiences in Canada and Germany</td>
-                    <td>Jordan Mansell</td>
-                    <td>2021</td>
-                    <td>Frontiers in Psychology</td>
-                    <td><a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2021.663627/full">https://www.frontiersin.org/articles/10.3389/fpsyg.2021.663627/full</a></td>
-                </tr>
-
-                <tr>
-                    <td>A Machine Learning Approach to Integral Field Unit Spectroscopy Observations: II. HII Region Line Ratios</td>
-                    <td>Carter Rhea</td>
-                    <td>2021</td>
-                    <td>Astrophysical Journal</td>
-                    <td><a href="https://arxiv.org/abs/2102.06230">https://arxiv.org/abs/2102.06230</a></td>
-                </tr>
-
-
-                <tr>
-                    <td>A Novel Machine Learning Approach to Disentangle Multi-Temperature Regions in Galaxy Clusters </td>
-                    <td>Carter Rhea</td>
-                    <td>2020</td>
-                    <td>Astronomical Journal</td>
-                    <td><a href="https://arxiv.org/pdf/2009.00643.pdf">https://arxiv.org/pdf/2009.00643.pdf</a></td>
-                </tr>
-
-                <tr>
-                    <td>The Hα star formation main sequence in cluster and field galaxies at  z∼1.6</td>
-                    <td>Julie Nantais</td>
-                    <td>2020</td>
-                    <td>MNRAS</td>
-                    <td><a href="https://arxiv.org/pdf/2009.07861.pdf">https://arxiv.org/pdf/2009.07861.pdf</a></td>
-                </tr>
-
-                <tr>
-                    <td>Machine Learning Approach to Integral Field Unit Spectroscopy Observations: I. HII Region Kinematics </td>
-                    <td>Carter Rhea</td>
-                    <td>2020</td>
-                    <td>Astrophysical Journal</td>
-                    <td><a href="https://arxiv.org/pdf/2008.08093.pdf">https://arxiv.org/pdf/2008.08093.pdf</a></td>
-                </tr>
-
-                <tr>
-                    <td>Evidence of runaway gas cooling in the absence of supermassive black hole feedback at the epoch of cluster formation </td>
-                    <td>Julie Hlavacek-Larrondo</td>
-                    <td>2020</td>
-                    <td>Astrophysical Journal Letters</td>
-                    <td><a href="https://arxiv.org/pdf/2007.15660.pdf">https://arxiv.org/pdf/2007.15660.pdf</a></td>
-                </tr>
-
-                <tr>
-                    <td>On the relation between mini-halos and AGN feedback in clusters of galaxies  </td>
-                    <td>Annabelle Richard-Laferriere</td>
-                    <td>2020</td>
-                    <td>MNRAS</td>
-                    <td><a href="https://arxiv.org/pdf/2007.01306.pdf">https://arxiv.org/pdf/2007.01306.pdf</a></td>
-                </tr>
-
-                <tr>
-                    <td>A Multiwavelength Study of the Massive Cool Core Cluster MACS J1447.4+0827 </td>
-                    <td>Myriam Prasow-Emond</td>
-                    <td>2020</td>
-                    <td>Astronomical Journal</td>
-                    <td><a href="https://arxiv.org/pdf/2006.04815.pdf">https://arxiv.org/pdf/2006.04815.pdf</a></td>
-                </tr>
-
-                <tr>
-                    <td>Simulation of Fracture in Particulate Rafts: Modeling,
-                        Implementation, Stochasticity, and Applications on Curved Surfaces</td>
-                    <td>Christian Peco</td>
-                    <td>2018</td>
-                    <td>International Journal of Solids and Structures</td>
-                    <td><a href="https://www.sciencedirect.com/science/article/abs/pii/S0020768318303329">https://www.sciencedirect.com/science/article/abs/pii/S0020768318303329</a></td>
-                </tr>
-
-                <tr>
-                    <td>Gravitational Size Scales for Quasars</td>
-                    <td>George Chartas</td>
-                    <td>2015</td>
-                    <td>Astronomische Nachrichten</td>
-                    <td><a href="https://arxiv.org/pdf/1509.05375.pdf">https://arxiv.org/pdf/1509.05375.pdf</a></td>
-                </tr>
-
-                </tbody>
-
-            </table>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="container-fluid col-md-12 mt-5 mb-5">
-<div class="card mb-5">
-    <div class="card-header">
-        Software Publication List
-    </div>
-        <div class="card">
-            <table id="dtBasicExample2" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                <thead>
-                <tr>
-                    <th class="th-sm text-capitalize font-weight-bold">Title
-                    </th>
-                    <th class="th-sm text-capitalize font-weight-bold">First Author
-                    </th>
-                    <th class="th-sm text-capitalize font-weight-bold">Date
-                    </th>
-                    <th class="th-sm text-capitalize font-weight-bold">Publication
-                    </th>
-                    <th class="th-sm text-capitalize font-weight-bold">Link
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                
-
-                <tr>
-                    <td>Valence Software Release</td>
-                    <td>Carter Rhea</td>
-                    <td>2020</td>
-                    <td>Open Source Framework</td>
-                    <td><a href="https://www.osf.io/9tza2/">https://www.osf.io/9tza2/</a></td>
-                </tr>
-
-                <tr>
-                    <td>X-tra Astronomy Tools</td>
-                    <td>Carter Rhea</td>
-                    <td>2020</td>
-                    <td>Open Source Framework</td>
-                    <td><a href="https://osf.io/vwcks/">https://osf.io/vwcks/</a></td>
-                </tr>
-
-                </tbody>
-
-            </table>
-        </div>
-    </div>
-</div>
-
-
-<div class="container-fluid col-md-12 mt-5 mb-5">
-</div>
-
-
-</body>
-<script>
-    $(document).ready(function () {
-        $('#dtBasicExample').DataTable();
-        $('.dataTables_length').addClass('bs-select');
-    });
-</script>
+        <!-- Scripts -->
+        <script src="common-js/jquery-3.2.1.min.js"></script>
+        <script src="common-js/bootstrap.js"></script>
+        <script src="common-js/publications.js"></script>
+    </body>
 </html>

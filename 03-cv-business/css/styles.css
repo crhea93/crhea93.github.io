@@ -86,6 +86,38 @@
     color: #fff;
 }
 
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    background: none;
+    border: 2px solid var(--primary-slate);
+    border-radius: 50px;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+}
+
+.dark-mode-toggle::before {
+    content: "☀️";
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .dark-mode-toggle::before {
+    content: "🌙";
+    left: calc(100% - 25px);
+}
+
+.dark-mode-toggle:hover {
+    border-color: var(--primary-purple);
+}
+
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
     display: none;
@@ -175,7 +207,7 @@ body {
 --------------------------------- */
 
 :root {
-    /* Modern Color Palette */
+    /* Modern Color Palette - Light Mode */
     --primary-slate: #334155;
     --secondary-slate: #475569;
     --light-slate: #64748b;
@@ -209,6 +241,46 @@ body {
         var(--bg-light) 0%,
         var(--bg-white) 100%
     );
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+    --primary-slate: #e2e8f0;
+    --secondary-slate: #cbd5e1;
+    --light-slate: #94a3b8;
+    --lighter-slate: #64748b;
+    --bg-light: #0f172a;
+    --bg-white: #1e293b;
+    --text-dark: #f1f5f9;
+    --text-medium: #cbd5e1;
+    --text-light: #94a3b8;
+
+    --gradient-section: linear-gradient(
+        180deg,
+        var(--bg-light) 0%,
+        var(--bg-white) 100%
+    );
+}
+
+body.dark-mode {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+body.dark-mode .main-nav {
+    background: rgba(30, 41, 59, 0.95);
+}
+
+body.dark-mode .experience,
+body.dark-mode .education,
+body.dark-mode .skill-category,
+body.dark-mode .contact-card {
+    background: var(--bg-white);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .quoto-section {
+    background: var(--bg-white);
 }
 
 html {

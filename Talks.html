@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <!-- Apply dark mode immediately to prevent flash -->
+        <script>
+            (function() {
+                const theme = localStorage.getItem('theme') || 'dark';
+                if (theme === 'dark') {
+                    document.documentElement.classList.add('dark-mode');
+                    document.body.classList.add('dark-mode');
+                }
+            })();
+        </script>
+
         <title>Presentations - Carter Rhea</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -236,26 +247,32 @@
                 }
             }
         </style>
+        
+        <style>
+            /* Prevent flash by hiding content until dark mode is applied */
+            body:not(.dark-mode):not(.light-mode) {
+                visibility: hidden;
+            }
+        </style>
     </head>
     <body class="talks-page">
         <!-- Navigation -->
-        <nav class="main-nav">
+                <nav class="main-nav">
             <div class="container">
                 <a href="index.html" class="logo">Carter Rhea</a>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="Projects.html">Projects</a></li>
-                    <li><a href="Publications.html">Publications</a></li>
-                    <li>
-                        <a href="Talks.html" class="active">Presentations</a>
-                    </li>
-                    
-                </ul>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <button class="dark-mode-toggle" aria-label="Toggle dark mode"></button>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a href="Publications.html">Publications</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
@@ -568,5 +585,6 @@
         <!-- Scripts -->
         <script src="common-js/jquery-3.2.1.min.js"></script>
         <script src="common-js/bootstrap.js"></script>
+        <script src="common-js/scripts.js"></script>
     </body>
 </html>
